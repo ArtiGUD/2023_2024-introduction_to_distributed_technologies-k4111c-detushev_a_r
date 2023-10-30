@@ -37,7 +37,7 @@ Date of finished: 31.09.2023
 Для выполнения лабораторной работы использовался установленный Docker Desktop для Windows. \
 Помимо этого по [оригинальной инструкции](https://minikube.sigs.k8s.io/docs/start/) был установлен minikube.
 С помощью команды minikube start, будет запущен minikube.
-![minikube-start](lab1\images\minikube-start.png)
+![minikube-start](.\images\minikube-start.png)
 
 ### Создание пода
 
@@ -45,20 +45,20 @@ Date of finished: 31.09.2023
 После этого был создан сервис для доступа к контейнеру c портом 8200 с помощью команды minikube kubectl -- expose pod vault --type=NodePort --port=8200.
 Используя команду minikube kubectl -- port-forward service/vault 8200:8200, мы прокидываем тунель от локальной машины до контейнера.
 
-![port-forward](lab1\images\port-forward.png)
+![port-forward](.\images\port-forward.png)
 
 Выполнив все команды, мы получили доступ к Vault.
 
-![web-vault](lab1\images\web-vault.jpeg)
+![web-vault](.\images\web-vault.jpeg)
 
 ### Получение токена
 
 Токен от Vault находится в логах. 
 Для того что бы увидеть логи необходимо воспользоваться командой kubectl logs (имя пода). В моём случае это kubectl logs vault.
-![logs](lab1\images\logs.png)
+![logs](.\images\logs.png)
 
 Скопируем данный токен и вставим в форму, тем самым получив доступ к функциональности Vault.
 
 ## Схема
 
-![scheme](lab1\images\scheme.png)
+![scheme](.\images\scheme.png)
