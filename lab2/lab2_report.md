@@ -39,33 +39,33 @@ Date of finished: ? \
 Далее для запуска манифеста используем команду **kubectl apply -f deployment.yaml**. \
 Для проверки воспользуемся командой **kubectl get deployment**. \
 
-![deployment](lab2/image/deployment.png)
+![deployment](/image/deployment.png)
 
 ### Создание Service
 
 Для создания service был написан манифест, который можно найти в том же файле **deployment.yaml**, а также был проброшен порт наружу. /
 Для проверки сервиса воспользуемся командой **kubectl get service**. /
 
-![service](lab2/image/service.png)
+![service](image/service.png)
 
 Далее для доступа к поду воспользуемся командой **kubectl port-forward service/frontend-service 3000:3000**
 
-![service2](lab2/image/service2.png)
+![service2](image/service2.png)
 
 ### Приложение
 
 При подключении к приложении по адресу: **127.0.0.1:3000** нам возвращается следующая страница:
 
-![Web](lab2/image/Web.png)
+![Web](image/Web.png)
 
 При изменении параметров в манифесте и повторном использовании команды **kubectl apply -f deployment.yaml**, изменения вступаю в силу и в UI мы увидим изменения.
 
-![Web](lab2/image/Web2.png)
+![Web](image/Web2.png)
 
 Используя команду **kubectl logs ** Получим логи от веб-сервиса, получив список подов, а потом запросив логи из них:
 
-![Logs](lab2/image/logs.png)
+![Logs](image/logs.png)
 
 ## Схема
 
-![scheme](lab2/image/shema.png)
+![shema](image/shema.png)
