@@ -35,3 +35,35 @@ Date of finished: ? \
 - Войдите в веб приложение по вашему FQDN используя HTTPS и проверьте наличие сертификата.
 
 ## Ход работы
+
+**Создание СonfigMap**
+
+Для создания СonfigMap был написан манифест, который можно найти в файле **СonfigMap.yaml**. \
+Далее для запуска манифеста используем команду **kubectl apply -f СonfigMap.yaml**. \
+Для проверки воспользуемся командой **kubectl get configmap**. \
+
+![configmap](/image/ConfigMap.png)
+
+**Создание ReplicaSet**
+
+Для создания ReplicaSet был написан манифест, который можно найти в файле **ReplicaSet.yaml**. \
+Далее для запуска манифеста используем команду **kubectl apply -f ReplicaSet.yaml**. \
+Для проверки воспользуемся командой **kubectl get replicaset**. \
+
+![replicaset](/image/ReplicaSet.png)
+
+Далее включаем ingress командой **minikube addons enable ingress**. \
+Затем нехобходимо создать TLS-сертификат и передать его в minikube. \
+Для создания TLS-сертификатов можно воспоьзоваться разными инструментами, такими как: Cert-Manager, Let's Encrypt, Cloud Providers и Самоподписанные сертификаты. \
+Для выпуска самоподписанного сертификата я воспользуюсь сервисом seag.pro[https://seag.pro/tools/ssl-generator/ru] для учебных целей. \
+Далее создадим секрет в minikube из сертификата с помощью команды **kubectl create secret tls my-tls-secret --cert=certificate.crt --key=private.key**. \
+Для проверки воспользуемся командой **kubectl get secret**
+
+![secret](/image/secret.png)
+
+Для создания Ingress был написан манифест, который можно найти в файле **ingress.yaml**. \
+Далее для запуска манифеста используем команду **kubectl apply -f ingress.yaml**. \
+Для проверки воспользуемся командой **kubectl get ingress**. \
+
+![ingress](/image/ingress.png)
+

@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: frontend-config
+  name: my-config
 data:
-  REACT_APP_USERNAME: ваше_имя
-  REACT_APP_COMPANY_NAME: ваша_компания
+  REACT_APP_USERNAME: your-username
+  REACT_APP_COMPANY_NAME: your-company

@@ -5,7 +5,7 @@ Year: 2023/2024 \
 Group: K4111C \
 Author: Detushev Artem R. \
 Lab: Lab2 \
-Date of create: 30.10.2023 \
+Date of create: 07.11.2023 \
 Date of finished: ? \
 
 # Лабораторная работа №2 "Развертывание веб сервиса в Minikube, доступ к веб интерфейсу сервиса. Мониторинг сервиса."
@@ -39,7 +39,7 @@ Date of finished: ? \
 Далее для запуска манифеста используем команду **kubectl apply -f deployment.yaml**. \
 Для проверки воспользуемся командой **kubectl get deployment**. \
 
-![deployment](/image/deployment.png)
+![deployment](image/deployment.png)
 
 ### Создание Service
 
