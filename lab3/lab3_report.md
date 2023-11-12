@@ -55,7 +55,7 @@ Date of finished: ?
 Далее включаем ingress командой **minikube addons enable ingress**. \
 Затем нехобходимо создать TLS-сертификат и передать его в minikube. \
 Для создания TLS-сертификатов можно воспоьзоваться разными инструментами, такими как: Cert-Manager, Let's Encrypt, Cloud Providers и Самоподписанные сертификаты. \
-Для выпуска самоподписанного сертификата я воспользуюсь сервисом [seag.pro] (https://seag.pro/tools/ssl-generator/ru) для учебных целей. \
+Для выпуска самоподписанного сертификата я воспользуюсь сервисом [seag.pro](https://seag.pro/tools/ssl-generator/ru) для учебных целей. \
 Далее создадим секрет в minikube из сертификата с помощью команды **kubectl create secret tls my-tls-secret --cert=certificate.crt --key=private.key**. \
 Для проверки воспользуемся командой **kubectl get secret**
 
