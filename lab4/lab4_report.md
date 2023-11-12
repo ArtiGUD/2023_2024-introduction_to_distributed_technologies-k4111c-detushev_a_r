@@ -42,13 +42,24 @@ Date of finished: ?
 
 **Создание СonfigMap**
 
+Для начала работы необходим включить minikube с плагином CNI(Container Network Interface), в работе будет использоваться CNI Calico. Так же есть такие плагины как: Flannel, Weave Net, Canal, Cilium, Multus, Antrea. Это только некоторые из множества CNI плагинов, доступных в Kubernetes платформе.\
+Для этого воспользуемся командой **minikube start --network-plugin=cni --cni=calico**.\
+Для проверки установки Calico воспользуемся командой **kubectl get pods -l k8s-app=calico-node -A**.\
+Чтобы у нас было 2 ноды необходимо воспользоваться командой **minikube node add**.\
+Для проверки используем команду **kubectl get nodes**.
 
+![add-addons](/image/Add addons.png)
 
-![configmap](/image/?)
+**Работа с IPAM Plugin**
 
-**Создание ReplicaSet**
+Для начала необходимо дать нодам произвольные лейблы например города. В данном примере будут использоваться SPB и MSC.\
+Для этого необходимо использоовать команду **kubectl label node minikube location=rack-1** и **kubectl label nodes minikube-m02 location=rack-2**.\
+Далее необходимо применить манифест IPPool.
 
-
+kubectl label nodes minikube location=rack-1  
+kubectl label nodes minikube-m02 location=rack-2
+kubectl get nodes -l location=rack-1
+kubectl get nodes -l location=rack-2
 
 ![replicaset](/image/?)
 

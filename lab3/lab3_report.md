@@ -18,7 +18,7 @@ Date of finished: ?
   - [Создание СonfigMap](#создание-configmap)
   - [Создание ReplicaSet](#создание-replicaset)
   - [Выпуск сертификата](Выпуск-сертификата)
-  - [Создание Infress](Создание-infress)
+  - [Создание Ingress](Создание-infress)
 - [Cхема](#схема)
 
 ## Введение
@@ -65,7 +65,7 @@ Date of finished: ?
 
 ![secret](image/secret.png)
 
-**Создание Infress**
+**Создание Ingress**
 
 Для создания Ingress был написан манифест, который можно найти в файле **ingress.yaml**. \
 Далее для запуска манифеста используем команду **kubectl apply -f ingress.yaml**. \

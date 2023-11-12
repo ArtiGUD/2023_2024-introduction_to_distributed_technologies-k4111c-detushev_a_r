@@ -1,0 +1,18 @@
+apiVersion: projectcalico.org/v3
+kind: IPPool
+metadata:
+  name: rack-1-pool
+spec:
+  blockSize: 26
+  cidr: 192.168.5.0/24
+  nodeSelector: location == "rack-1"
+
+---
+apiVersion: projectcalico.org/v3
+kind: IPPool
+metadata:
+  name: rack-2-pool
+spec:
+  blockSize: 26
+  cidr: 192.168.15.0/24
+  nodeSelector: location == "rack-2"
