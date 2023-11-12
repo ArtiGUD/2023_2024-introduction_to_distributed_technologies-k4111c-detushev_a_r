@@ -15,8 +15,10 @@ Date of finished: ?
 - [Содержание](#содержание)
 - [Введение](#введение)
 - [Ход работы](#ход-работы)
-  - [Создание Deployment](#создание-deployment)
-  - [Создание Service](#создание-service)
+  - [Создание СonfigMap](#создание-configmap)
+  - [Создание ReplicaSet](#создание-replicaset)
+  - [Выпуск сертификата](Выпуск-сертификата)
+  - [Создание Infress](Создание-infress)
 - [Cхема](#схема)
 
 ## Введение
@@ -52,6 +54,8 @@ Date of finished: ?
 
 ![replicaset](image/ReplicaSet.png)
 
+**Выпуск сертификата**
+
 Далее включаем ingress командой **minikube addons enable ingress**. \
 Затем нехобходимо создать TLS-сертификат и передать его в minikube. \
 Для создания TLS-сертификатов можно воспоьзоваться разными инструментами, такими как: Cert-Manager, Let's Encrypt, Cloud Providers и Самоподписанные сертификаты. \
@@ -60,6 +64,8 @@ Date of finished: ?
 Для проверки воспользуемся командой **kubectl get secret**
 
 ![secret](image/secret.png)
+
+**Создание Infress**
 
 Для создания Ingress был написан манифест, который можно найти в файле **ingress.yaml**. \
 Далее для запуска манифеста используем команду **kubectl apply -f ingress.yaml**. \
