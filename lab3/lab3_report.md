@@ -73,3 +73,12 @@ Date of finished: ?
 
 ![ingress](image/ingress.png)
 
+Далее зайдем по FQDN используя HTTPS.
+
+![web](image/web.png)
+
+И проверяем сертификат.
+
+![cert](image/cert.png)
+
+![shema](image/shema.png)
