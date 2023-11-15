@@ -81,4 +81,4 @@ Date of finished: ?
 
 ![cert](image/cert.png)
 
-![shema](image/shema.png)
+![sheme](image/sheme.png)
