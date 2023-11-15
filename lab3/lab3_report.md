@@ -81,4 +81,6 @@ Date of finished: ?
 
 ![cert](image/cert.png)
 
+## Схема
+
 ![sheme](image/sheme.png)
