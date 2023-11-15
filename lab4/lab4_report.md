@@ -56,11 +56,6 @@ Date of finished: ?
 Для этого необходимо использоовать команду **kubectl label node minikube location=rack-1** и **kubectl label nodes minikube-m02 location=rack-2**.\
 Далее необходимо применить манифест IPPool.
 
-kubectl label nodes minikube location=rack-1  
-kubectl label nodes minikube-m02 location=rack-2
-kubectl get nodes -l location=rack-1
-kubectl get nodes -l location=rack-2
-
 ![replicaset](/image/?)
 
 
