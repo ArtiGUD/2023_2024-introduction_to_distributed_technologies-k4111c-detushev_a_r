@@ -54,15 +54,21 @@ Date of finished: ?
 
 Для начала необходимо дать нодам произвольные лейблы например города. В данном примере будут использоваться SPB и MSC.\
 Для этого необходимо использоовать команду **kubectl label node minikube location=rack-1** и **kubectl label nodes minikube-m02 location=rack-2**.\
-Далее необходимо применить манифест IPPool.
+После чего создаётся два IPPool-а для обоих зон, используя calicoctl и манифест ippool.yaml и удаляется IPPool по умолчанию:\
+**calicoctl delete ippools default-ipv4-ippool --allow-version-mismatch**\
+**calicoctl create -f ippool.yaml --allow-version-mismatch**\
+**calicoctl get ippool -o wide --allow-version-mismatch**
 
-![replicaset](/image/?)
+![ippool](/image/ippool.png)
 
-
+Затем создадим deployment из ЛР3, после чего можно подключится к сервису по minikube tunnel, и зайти в браузер, где будет видно, что поды меняются так-как был выбран сервис LoadBalancer:
 
 ![secret](/image/?)
 
-
+После подключения к одному из подов, используя kubectl exec -it <pod> -- /bin/sh, и получения FQDN подов, используя nslookup <ip>, другой под пингуется командой ping <FQDN or IP>:
 
 ![ingress](/image/?)
 
+## Схема
+
+![sheme](/image/sheme.png)
