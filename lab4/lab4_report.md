@@ -15,8 +15,8 @@ Date of finished: ?
 - [Содержание](#содержание)
 - [Введение](#введение)
 - [Ход работы](#ход-работы)
-  - [Создание Deployment](#создание-deployment)
-  - [Создание Service](#создание-service)
+  - [Запуск 2 нод с аддоном calico](#Запуск-2-нод-с-аддоном-calico)
+  - [Работа с IPAM Plugin](#Работа-с-IPAM-Plugin)
 - [Cхема](#схема)
 
 ## Введение
@@ -40,7 +40,7 @@ Date of finished: ?
 
 ## Ход работы
 
-**Создание СonfigMap**
+**Запуск 2 нод с аддоном calico**
 
 Для начала работы необходим включить minikube с плагином CNI(Container Network Interface), в работе будет использоваться CNI Calico. Так же есть такие плагины как: Flannel, Weave Net, Canal, Cilium, Multus, Antrea. Это только некоторые из множества CNI плагинов, доступных в Kubernetes платформе.\
 Для этого воспользуемся командой **minikube start --network-plugin=cni --cni=calico**.\
