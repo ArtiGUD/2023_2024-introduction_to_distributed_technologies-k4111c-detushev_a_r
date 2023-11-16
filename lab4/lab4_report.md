@@ -48,7 +48,7 @@ Date of finished: ?
 Чтобы у нас было 2 ноды необходимо воспользоваться командой **minikube node add**.\
 Для проверки используем команду **kubectl get nodes**.
 
-![add-addons](/image/Add addons.png)
+![add-addons](image/Add addons.png)
 
 **Работа с IPAM Plugin**
 
@@ -59,20 +59,20 @@ Date of finished: ?
 **calicoctl create -f ippool.yaml --allow-version-mismatch**\
 **calicoctl get ippool -o wide --allow-version-mismatch**
 
-![ippool](/image/ippool.png)
+![ippool](image/ippool.png)
 
 Затем создадим deployment из ЛР3, после чего можно подключится к сервису по minikube tunnel, и зайти в браузер, где будет видно, что поды меняются:
 **kubectl apply -f deployment.yaml**\
-**kubectl get pod -o wide**\
-**minikube profile list**\
-**minikube tunnel**
+**kubectl get pods -o wide**
+**kubectl port-forward service/frontend-service 3000:3000**
 
-![web](/image/web.png)
+![web](image/web.png)
 
-После подключения к одному из подов, используя **kubectl exec -it <pod> -- /bin/sh**, и получения FQDN подов, используя **nslookup <ip>**, другой под пингуется командой **ping <FQDN or IP>**:
+Из картинки мы видим что ip addres соответствует ip pool.
+После подключения к одному из подов, используя **kubectl exec -it <pod> -- /bin/sh** узнаём ip адрес с помощью команды **ip addr**, другой под пингуем командой **ping <IP>**:
 
-![ingress](/image/?)
+![ping](image/ping.png)
 
 ## Схема
 
-![sheme](/image/sheme.png)
+![sheme](image/sheme.png)
