@@ -61,11 +61,15 @@ Date of finished: ?
 
 ![ippool](/image/ippool.png)
 
-Затем создадим deployment из ЛР3, после чего можно подключится к сервису по minikube tunnel, и зайти в браузер, где будет видно, что поды меняются так-как был выбран сервис LoadBalancer:
+Затем создадим deployment из ЛР3, после чего можно подключится к сервису по minikube tunnel, и зайти в браузер, где будет видно, что поды меняются:
+**kubectl apply -f deployment.yaml**\
+**kubectl get pod -o wide**\
+**minikube profile list**\
+**minikube tunnel**
 
-![secret](/image/?)
+![web](/image/web.png)
 
-После подключения к одному из подов, используя kubectl exec -it <pod> -- /bin/sh, и получения FQDN подов, используя nslookup <ip>, другой под пингуется командой ping <FQDN or IP>:
+После подключения к одному из подов, используя **kubectl exec -it <pod> -- /bin/sh**, и получения FQDN подов, используя **nslookup <ip>**, другой под пингуется командой **ping <FQDN or IP>**:
 
 ![ingress](/image/?)
 
