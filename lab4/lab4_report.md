@@ -6,7 +6,7 @@ Group: K4111C \
 Author: Detushev Artem R. \
 Lab: Lab4 \
 Date of create: 12.11.2023 \
-Date of finished: ? 
+Date of finished: 16.11.2023 
 
 # Лабораторная работа №4 "Сети связи в Minikube, CNI и CoreDNS"
 

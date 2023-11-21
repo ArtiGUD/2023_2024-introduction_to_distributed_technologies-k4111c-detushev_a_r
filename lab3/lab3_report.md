@@ -6,7 +6,7 @@ Group: K4111C \
 Author: Detushev Artem R. \
 Lab: Lab3 \
 Date of create: 07.11.2023 \
-Date of finished: ? 
+Date of finished: 16.11.2023 
 
 # Лабораторная работа №3 "Сертификаты и "секреты" в Minikube, безопасное хранение данных."
 
